@@ -9,6 +9,10 @@
 
     <TextView
         android:id= "@+id/T2"
-        android:text ="hey"/>
+        android:text ="mariaa testing gitt"/>
+
+    <TextView
+        android:id= "@+id/T3"
+        android:text ="mariaa testing gitt ohoiii"/>
 
 </android.support.constraint.RelativeLayout>
