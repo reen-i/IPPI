@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DivaLaVida.iml" filepath="$PROJECT_DIR$/DivaLaVida.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GraphView-master1/GraphView-master1.iml" filepath="$PROJECT_DIR$/GraphView-master1/GraphView-master1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Library/Library.iml" filepath="$PROJECT_DIR$/Library/Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

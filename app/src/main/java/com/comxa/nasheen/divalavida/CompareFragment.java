@@ -68,7 +68,7 @@ public class CompareFragment extends Fragment {
 
 
 
-        return inflater.inflate(R.layout.fragment_qualification, container, false);
+        return inflater.inflate(R.layout.fragment_compare, container, false);
     }
 
 }

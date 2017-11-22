@@ -18,8 +18,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kosalgeek.asynctask.AsyncResponse;
+
 public class  MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener, AsyncResponse, View.OnClickListener {
 
     TextView etuserName;
     View parlo;
@@ -32,12 +34,6 @@ public class  MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //setContentView(R.id.fragment_home);
-
-        HomeFragment homeFragment = new HomeFragment();
-        FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.constlayout_forfragment, homeFragment, homeFragment.getTag()).commit();
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -118,33 +114,32 @@ public class  MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_college) {
+        if (id == R.id.nav_generate) { //GENERATE
+            // Handle the camera action
             GenerateFragment generateFragment = new GenerateFragment(); //create an object
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.constlayout_forfragment, generateFragment, generateFragment.getTag()).commit(); // getTag()= when you want to call the fragment back from the fragment managerv
 
-        } else if (id == R.id.nav_qualification) {
+        } else if (id == R.id.nav_compare) { //COMPARE
             Toast.makeText(this, "galleryyy", Toast.LENGTH_SHORT).show();
             CompareFragment compareFragment = new CompareFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.constlayout_forfragment, compareFragment, compareFragment.getTag()).commit();
 
-        } else if (id == R.id.nav_interest) {
+        } else if (id == R.id.nav_bookmark) { //BOOKMARK
             Toast.makeText(this, "slideshowww", Toast.LENGTH_SHORT).show();
 
 
-        } else if (id == R.id.nav_home) {
-            HomeFragment homeFragment = new HomeFragment();
+        } else if (id == R.id.nav_home) { //MAIN
+            HomeFragment homeFragment = HomeFragment.newInstance(5);
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.constlayout_forfragment, homeFragment, homeFragment.getTag()).commit();
 
-        } else if (id == R.id.nav_background) {
 
-        } else if (id == R.id.nav_list) {
 
-        } else if (id == R.id.nav_chat) {
+        } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_user) {
+        } else if (id == R.id.nav_send) {
 
         } else if (id == R.id.nav_logout) {
                 SharedPreferences sharedpreferences = getSharedPreferences(MainActivity.MyPREFERENCES, Context.MODE_PRIVATE);
@@ -165,10 +160,16 @@ public class  MainActivity extends AppCompatActivity
         return true;
     }
 
-//    @Override
-//    public void onFragmentInteraction(String data) {
-//        Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
-//    }
+    @Override
+    public void onFragmentInteraction(String data) {
+        Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void processFinish(String result) {
+        Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+    }
+
 
     @Override
     public void onClick(View v) {

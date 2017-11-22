@@ -1,2 +1,1 @@
-include ':app', ':GraphView-master1'
-include ':Library'
+include ':app'
