@@ -8,30 +8,42 @@
             android:title="Home" />
 
         <item
-            android:id="@+id/nav_generate"
-            android:icon="@drawable/ic_generate"
-            android:title="Generate" />
+            android:id="@+id/nav_college"
+            android:icon="@drawable/college"
+            android:title="By College" />
+
         <item
-            android:id="@+id/nav_compare"
-            android:icon="@drawable/ic_compare"
-            android:title="Compare" />
+            android:id="@+id/nav_qualification"
+            android:icon="@drawable/qualification"
+            android:title="By Qualification" />
+
         <item
-            android:id="@+id/nav_bookmark"
-            android:icon="@android:drawable/btn_star"
-            android:title="Bookmark" />
+            android:id="@+id/nav_interest"
+            android:icon="@drawable/interest"
+            android:title="By Interest" />
+
+        <item
+            android:id="@+id/nav_background"
+            android:icon="@drawable/background"
+            android:title="By Background" />
+
+        <item
+            android:id="@+id/nav_list"
+            android:icon="@drawable/collegelist"
+            android:title="College List" />
 
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_chat"
+                android:icon="@drawable/chatroom"
+                android:title="Chatroom" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_user"
+                android:icon="@drawable/users"
+                android:title="Users" />
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/logout"
